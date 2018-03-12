@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VidBits</title>
+		<link rel="icon" type="image/ico" href="img/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+		<link rel='stylesheet' href='stylesheets/reset.css' />
+		<link rel='stylesheet' href='stylesheets/style.css' />
+	</head>
+	<body>
+		<div class="single-item-container">
+		  <div class="single-item-card">
+			<div class="single-item-contents">
+			  <div id="item-title" class="single-item-title">
+				{{video.title}}
+			  </div>
+
+				<iframe src="{{video.url}}"></iframe>
+			  <div id="item-description" class="single-item-description">
+				{{video.description}}
+			  </div>
+				<a class="button" id="edit-button" href="/videos/{{video._id}}/edit">
+					Edit
+				</a>
+			  <div class="single-item-navigation">
+				<a href="index.html">
+				  <img class="back-arrow" src="img/back.svg" alt="back">
+				</a>
+				<a class='button' id="delete-button" href="/videos/{{video._id}}/delete">
+					Delete
+				</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>
